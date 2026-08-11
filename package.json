@@ -1,1 +1,1 @@
-{"name":"accessible-workspace","private":true,"type":"module","scripts":{"dev":"vite","build":"tsc && vite build"},"devDependencies":{"typescript":"latest","vite":"latest"}}
+{"name":"accessible-workspace","private":true,"type":"module","scripts":{"dev":"vite","build":"tsc && vite build","test":"vitest run"},"devDependencies":{"jsdom":"latest","typescript":"latest","vite":"latest","vitest":"latest"}}

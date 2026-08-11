@@ -2,11 +2,17 @@
 
 A keyboard-friendly TypeScript web interface for reviewing work items, filtering state, and inspecting a focused result without losing context.
 
+## Architecture
+
+`src/state/reducer.ts` owns typed state transitions, `src/api/workspaceApi.ts` defines the data boundary, and `src/components/` contains focused DOM components for search, filtering, status announcements, and work items. `src/app.ts` composes them and owns focus restoration after archive actions.
+
 ## Run
 
 ```bash
 npm install
 npm run dev
+# run unit and component checks
+npm test
 ```
 
 ## Design notes
@@ -22,4 +28,4 @@ The interface uses semantic headings and landmarks, labeled controls, live resul
 
 ## Tests and build
 
-`npm run build` runs TypeScript strict checking before producing the Vite bundle. The small UI state model is typed so API response changes surface during development.
+`npm test` runs reducer and accessibility-control tests in Vitest. `npm run build` runs TypeScript strict checking before producing the Vite bundle. The UI state model is typed so API response changes surface during development.
