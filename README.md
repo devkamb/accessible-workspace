@@ -10,10 +10,12 @@ A keyboard-friendly TypeScript web interface for reviewing work items, filtering
 
 ```bash
 npm install
-npm run dev
-# run unit and component checks
 npm test
+npm run build
+npm run dev
 ```
+
+Example: type in the search box, choose `Review`, and the live status region announces the matching count. Archive an item with its button; focus moves to the next item or returns to search when none remain.
 
 ## Design notes
 
